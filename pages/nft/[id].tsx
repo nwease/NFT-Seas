@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
 
 function NFTPage() {
     return (
@@ -18,11 +19,11 @@ function NFTPage() {
                     {/*LEFT TEXT*/}
                     <div className='p-5 text-center space-y-2'>
                         <h1 className='text-4xl font-bold text-white'>
-                            Ape NICK
+                            NFT Nick
                         </h1>
 
                         <h2 className='text-xl text-gray-300'>
-                            A collection of NFTs!
+                            A collection of awesome NFTs!
                         </h2>
                     </div>
                 </div>
@@ -62,6 +63,11 @@ function NFTPage() {
                         13 / 21 NFT's claimed
                     </p>
                 </div>
+
+                {/*MINT NFT BUTTON*/}
+                <button className=' mt-10 h-16 w-full bg-red-600 text-white rounded-full font-bold'>
+                    Mint NFT (0.01 ETH)
+                </button>
             </div>
         </div>
     );
