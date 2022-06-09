@@ -19,7 +19,7 @@ function NFTPage() {
                     <div className='bg-gradient-to-br from-yellow-300 to-purple-500 p-2 rounded-xl'>
                         <img
                             className='w-44 rounded-xl object-cover lg:h-96 lg:w-72'
-                            src='https://links.papareact.com/8sg'
+                            src='https://i.pinimg.com/736x/2c/a3/e6/2ca3e6ca589553a8cd71566437ee150d.jpg'
                             alt='Ape NFT'
                         />
                     </div>
@@ -67,8 +67,8 @@ function NFTPage() {
                 {/*RIGHT CONTENT*/}
                 <div className='mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:space-y-0 lg:justify-center'>
                     <img
-                        className='w-80 object-cover pb-10 lg:h-40'
-                        src='https://links.papareact.com/bdy'
+                        className='w-full object-cover pb-10 lg:h-100 lg:w-100'
+                        src='https://nftnewspro.com/wp-content/uploads/2021/09/most-expensive-nft.png'
                         alt='Apes'
                     />
 
