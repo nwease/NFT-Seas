@@ -2,6 +2,14 @@ import React from 'react';
 import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
 
 function NFTPage() {
+
+    //AUTHENTICATION
+    const connectWithMetamask = useMetamask();
+    const address = useAddress();
+    const disconnect = useDisconnect();
+
+    console.log(address)
+
     return (
         <div className='flex h-screen flex-col lg:grid lg:grid-cols-10'>
             <div className='bg-gradient-to-br from-cyan-600 to-rose-300 lg:col-span-4'>
@@ -40,12 +48,21 @@ function NFTPage() {
                         NFT Marketplace
                     </h1>
 
-                    <button className='rounded-full bg-blue-400 text-white px-4 py-2 text-xs font-bold lg:px-5 lg:py-3 lg:text-base'>
-                        Sign-In
+                    <button
+                        onClick={() => (address ? disconnect() : connectWithMetamask())}
+                        className='rounded-full bg-blue-400 text-white px-4 py-2 text-xs font-bold lg:px-5 lg:py-3 lg:text-base'
+                    >
+                        {address ? 'Sign Out' : 'Sign In'}
                     </button>
                 </header>
 
                 <hr className='my-2 border'/>
+
+                {address && (
+                    <p className='text-gray-600 text-center text-sm'>
+                        You are logged into metaMask {address.substring(0, 5)}...{address.substring(address.length - 5)}
+                    </p>
+                )}
 
                 {/*RIGHT CONTENT*/}
                 <div className='mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:space-y-0 lg:justify-center'>
