@@ -29,8 +29,8 @@ function NFTPage() {
             </div>
 
             {/*RIGHT HEADER*/}
-            <div className=''>
-                <header className=''>
+            <div className='flex flex-1 flex-col p-12 lg:col-span-6 bg-gray-100'>
+                <header className='flex items-center justify-between'>
                     <h1 className='w-52 cursor-pointer text-xl font-extralight sm:w-80'>
                         The{' '}
                         <span className='font-extrabold underline decoration-amber-500'>
@@ -44,9 +44,23 @@ function NFTPage() {
                     </button>
                 </header>
 
-                {/*RIGHT CONTENT*/}
-                <div className=''>
+                <hr className='my-2 border'/>
 
+                {/*RIGHT CONTENT*/}
+                <div className='mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:space-y-0 lg:justify-center'>
+                    <img
+                        className='w-80 object-cover pb-10 lg:h-40'
+                        src='https://links.papareact.com/bdy'
+                        alt='Apes'
+                    />
+
+                    <h1 className='text-3xl font-bold lg:text-4xl lg:font-extrabold'>
+                        The NICK Coding Group | NFT Drop
+                    </h1>
+
+                    <p className='pt-2 text-xl text-green-500'>
+                        13 / 21 NFT's claimed
+                    </p>
                 </div>
             </div>
         </div>
